@@ -1,6 +1,7 @@
 {
   "scripts": {
     "start": "node app.js",
+    "prestart": "yarn test",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "test": "jest"
