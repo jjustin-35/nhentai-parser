@@ -1,0 +1,19 @@
+import { describe, expect, it } from '@jest/globals';
+import * as dotenv from 'dotenv';
+
+import login from '../apis/login.js';
+dotenv.config();
+
+describe('login', () => {
+  it('should login with email and password', async () => {
+    const user = await login(
+      process.env.FIREBASE_EMAIL,
+      process.env.FIREBASE_PASSWORD
+    );
+    expect(user.email).toBe(process.env.FIREBASE_EMAIL);
+  });
+  it('should not login with wrong email and password', async () => {
+    const user = await login('wrong email', 'wrong password');
+    expect(user).toBe(undefined);
+  });
+});

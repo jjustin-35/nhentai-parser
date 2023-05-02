@@ -1,6 +1,6 @@
 import { describe, expect, it } from '@jest/globals';
 
-import parser from '../helpers/parser';
+import parser from '../helpers/parser.js';
 
 describe('parser', () => {
   it('should return an array of urls', () => {
