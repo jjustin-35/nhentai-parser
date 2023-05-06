@@ -25,7 +25,7 @@ describe('parser', () => {
     expect(urls).toEqual([
       'https://nhentai.net/g/123456/',
       'https://nhentai.net/g/354321/',
-      'not a valid number'
+      '123'
     ]);
   });
   it('should return an error message if there is NaN in the string', () => {
@@ -34,7 +34,7 @@ describe('parser', () => {
     expect(urls).toEqual([
       'https://nhentai.net/g/123456/',
       'https://nhentai.net/g/354321/',
-      'not a valid number'
+      '123a'
     ]);
   });
 });

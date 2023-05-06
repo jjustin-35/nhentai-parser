@@ -6,7 +6,7 @@ const parser = (numbers) => {
 
   const urls = numberArray.map((number) => {
     if (!number || isNaN(number) || number.length !== 6) {
-      return 'not a valid number';
+      return number;
     }
     return `${basePath}${number}/`;
   });

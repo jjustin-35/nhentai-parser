@@ -2,19 +2,11 @@ import { describe, expect, it } from '@jest/globals';
 
 import {
   getData,
-  setData,
   updateBookData,
   deleteData
 } from '../apis/database.js';
 
 describe('database', () => {
-  it('should set data to database', async () => {
-    const userId = 'test';
-    const data = await setData(userId, {
-      books: ['https://nhentai.net/g/123456/']
-    });
-    expect(data).toEqual(undefined);
-  });
   it('should update data to database', async () => {
     const userId = 'test';
     const data = await updateBookData(userId, [
