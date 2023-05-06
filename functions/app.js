@@ -1,9 +1,10 @@
 import linebot from 'linebot';
 import * as dotenv from 'dotenv';
-import './config/firebase.js';
+import functions from 'firebase-functions';
 
+import './functions/config/firebase.js';
 import login from './apis/login.js';
-import parser from './helpers/parser.js';
+import parser from './functions/helpers/parser.js';
 import { getData, updateBookData } from './apis/database.js';
 dotenv.config();
 
@@ -46,7 +47,7 @@ bot.on('message', async function (event) {
             return urlRegex.test(url);
         });
         await updateBookData(userId, filteredUrls);
-    
+
         return event.reply(urlsMsg);
     } catch (error) {
         console.log(error);
@@ -57,3 +58,5 @@ bot.on('message', async function (event) {
 bot.listen('/linewebhook', process.env.PORT || 3000, function () {
     console.log('LineBot is running.');
 });
+
+export const linebotWebhook = functions.https.onRequest(bot.parser());
