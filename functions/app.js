@@ -8,7 +8,7 @@ import parser from './helpers/parser.js';
 import { getData, updateBookData } from './apis/database.js';
 dotenv.config();
 
-login(process.env.FIREBASE_EMAIL, process.env.FIREBASE_PASSWORD);
+login(process.env.MYFIREBASE_EMAIL, process.env.MYFIREBASE_PASSWORD);
 
 const bot = linebot({
     channelId: process.env.CHANNEL_ID,
@@ -55,8 +55,8 @@ bot.on('message', async function (event) {
     }
 });
 
-bot.listen('/linewebhook', process.env.PORT || 3000, function () {
-    console.log('LineBot is running.');
-});
+// bot.listen('/linewebhook', process.env.PORT || 3000, function () {
+//     console.log('LineBot is running.');
+// });
 
 export const linebotWebhook = functions.https.onRequest(bot.parser());

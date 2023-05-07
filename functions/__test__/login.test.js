@@ -7,10 +7,10 @@ dotenv.config();
 describe('login', () => {
   it('should login with email and password', async () => {
     const user = await login(
-      process.env.FIREBASE_EMAIL,
-      process.env.FIREBASE_PASSWORD
+      process.env.MYFIREBASE_EMAIL,
+      process.env.MYFIREBASE_PASSWORD
     );
-    expect(user.email).toBe(process.env.FIREBASE_EMAIL);
+    expect(user.email).toBe(process.env.MYFIREBASE_EMAIL);
   });
   it('should not login with wrong email and password', async () => {
     const user = await login('wrong email', 'wrong password');
