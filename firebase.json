@@ -14,7 +14,7 @@
       },
       {
         "source": "/linewebhook",
-        "function": "linewebhook"
+        "function": "linebotWebhook"
       }
     ]
   },
