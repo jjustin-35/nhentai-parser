@@ -10,6 +10,7 @@
         "logs": "firebase functions:log"
     },
     "main": "app.js",
+    "engines": {"node": "18"},
     "type": "module",
     "dependencies": {
         "cheerio": "^1.0.0-rc.12",

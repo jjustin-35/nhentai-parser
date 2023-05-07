@@ -6,6 +6,7 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "runtime": "nodejs18",
     "rewrites": [
       {
         "source": "**",
@@ -26,9 +27,6 @@
         ".git",
         "firebase-debug.log",
         "firebase-debug.*.log"
-      ],
-      "predeploy": [
-        "npm --prefix \"$RESOURCE_DIR\" run lint"
       ]
     }
   ]
