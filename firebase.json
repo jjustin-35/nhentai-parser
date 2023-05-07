@@ -9,12 +9,12 @@
     "runtime": "nodejs18",
     "rewrites": [
       {
-        "source": "**",
-        "destination": "/index.html"
-      },
-      {
         "source": "/linewebhook",
         "function": "linebotWebhook"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
       }
     ]
   },
