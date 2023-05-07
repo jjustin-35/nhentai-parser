@@ -2,9 +2,9 @@ import linebot from 'linebot';
 import * as dotenv from 'dotenv';
 import functions from 'firebase-functions';
 
-import './functions/config/firebase.js';
+import './config/firebase.js';
 import login from './apis/login.js';
-import parser from './functions/helpers/parser.js';
+import parser from './helpers/parser.js';
 import { getData, updateBookData } from './apis/database.js';
 dotenv.config();
 

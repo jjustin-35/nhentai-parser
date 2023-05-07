@@ -1,4 +1,4 @@
-export const setHistoryData = (data, urls) => {
+const setHistoryData = (data, urls) => {
   const { source } = data;
   const { userId } = source;
 
@@ -9,3 +9,5 @@ export const setHistoryData = (data, urls) => {
 
   return historyData;
 };
+
+export default setHistoryData;

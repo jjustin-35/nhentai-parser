@@ -1,4 +1,4 @@
-import app from '../functions/config/firebase.js';
+import app from '../config/firebase.js';
 import {
     getDatabase,
     ref,
